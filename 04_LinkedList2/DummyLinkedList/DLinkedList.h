@@ -6,7 +6,7 @@ typedef int LData;
 typedef struct _node
 {
     LData data;
-    Node *next;
+    struct _node *next;
 } Node;
 
 typedef struct _linkdList
