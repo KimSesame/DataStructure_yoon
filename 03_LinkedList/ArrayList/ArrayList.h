@@ -2,9 +2,10 @@
 #define __ARRAY_LIST__
 
 #include "Point.h"
+#include "NameCard.h"
 
 #define LIST_LEN 100
-typedef Point* LData; // ¸®½ºÆ®¿¡ ÀúÀåµÇ´Â µ¥ÀÌÅÍÀÇ ÀÚ·áÇüÀ» Á¤ÀÇ -> cpp¿¡¼­ ÅÛÇÃ¸´À» ÀÌ¿ëÇÒ ¼ö ÀÖ´Ù
+typedef NameCard* LData; // ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ç´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ú·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ -> cppï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ã¸ï¿½ï¿½ï¿½ ï¿½Ì¿ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö´ï¿½
 
 typedef struct _arrayList
 {

@@ -53,6 +53,7 @@ LData LRemove(List *plist)
     (plist->numOfData)--;
     (plist->curPosition)--;
 
+    delete rdata;
     return rdata;
 }
 
