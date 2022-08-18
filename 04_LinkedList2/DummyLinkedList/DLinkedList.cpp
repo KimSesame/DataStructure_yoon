@@ -23,7 +23,17 @@ void FInsert(List *plist, LData data)
 
 void SInsert(List *plist, LData data)
 {
-    // Define Later
+    Node *new_node = (Node *)malloc(sizeof(Node));
+    Node *pred = plist->head;
+    new_node->data = data;
+
+    while (pred->next != NULL && plist->comp(data, pred->next->data) != 0)
+        pred = pred->next;
+
+    new_node->next = pred->next;
+    pred->next = new_node;
+
+    (plist->numOfData)++;
 }
 
 void LInsert(List *plist, LData data)
@@ -80,5 +90,5 @@ int LCount(List *plist)
 
 void SetSortRule(List *plist, int (*comp)(LData d1, LData d2))
 {
-    // Define Later
+    plist->comp = comp;
 }
