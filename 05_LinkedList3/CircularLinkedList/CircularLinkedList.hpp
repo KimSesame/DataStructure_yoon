@@ -47,6 +47,8 @@ void CircularList<T>::append(T data)
 template <typename T>
 void CircularList<T>::print()
 {
+    if (tail == nullptr)
+        return;
 
     Node<T> *cur_node = tail;
 
@@ -63,6 +65,9 @@ void CircularList<T>::print()
 template <typename T>
 T CircularList<T>::del(T data)
 {
+    if (tail == nullptr)
+        return 0;
+
     Node<T> *cur_node = tail;
     Node<T> *prev_node = nullptr;
     Node<T> *del_node = nullptr;
@@ -80,12 +85,12 @@ T CircularList<T>::del(T data)
 
         cur_node = cur_node->next;
     } while (cur_node != tail);
-    del_data = del_node->data;
-
+    
     // Delete
     if (del_node == nullptr)
         return 0;
 
+    del_data = del_node->data;
     if (del_node == tail)
     {
         if (prev_node == tail)
